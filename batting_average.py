@@ -4,17 +4,20 @@ class BattingAverage():
         self.strikeOuts = 0
         self.hits = 0
 
-    def atThePlate(atBats):
+    def atThePlate(self, atBats):
         self.atBats += 1
-        print("Your average is: " + {self.hits}/{self.atBats})
+        print(f"Your average is: " + {self.hits}/{self.atBats})
 
-    def strikeOut(atBats, strikeOuts):
+    def strikeOut(self, atBats, strikeOuts):
         self.atBats += 1
         self.strikeOuts += 1
-        print("Your average is: " + {self.hits}/{self.atBats})
+        print(f"Your average is: " + {self.hits}/{self.atBats})
 
 
-    def getAHit(atBats, hits):
+    def getAHit(self, atBats, hits):
         self.atBats += 1
         self.hits += 1
-        print("Your average is: " + {self.hits}/{self.atBats})
+        print(f"Your average is: " + {self.hits}/{self.atBats})
+
+cabassa_average = BattingAverage(7, 2, 3)
+cabassa_average.getAHit()

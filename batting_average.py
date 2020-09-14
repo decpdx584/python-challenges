@@ -1,8 +1,10 @@
 class BattingAverage():
-    def __init__(self, atBats, strikeOuts, hits):
-        self.atBats = 0
-        self.strikeOuts = 0
-        self.hits = 0
+    def __init__(self, batterName, atBats, strikeOuts, hits):
+        self.batterName = batterName
+        self.atBats = atBats
+        self.strikeOuts = strikeOuts
+        self.hits = hits
+        self.average = int(hits) / int(atBats)
 
     def atThePlate(self, atBats):
         self.atBats += 1
@@ -19,5 +21,6 @@ class BattingAverage():
         self.hits += 1
         print(f"Your average is: " + {self.hits}/{self.atBats})
 
-cabassa_average = BattingAverage(7, 2, 3)
-cabassa_average.getAHit()
+cabassa = BattingAverage("Cabassa", 7, 2, 3)
+cabassa.getAHit()
+print(cabassa)
